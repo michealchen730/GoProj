@@ -1,0 +1,16 @@
+syntax = "proto3";
+package protofiles;
+
+service UserInfoService {
+  rpc GetUserInfo (UserRequest) returns (UserResponse){}
+}
+
+message UserRequest {
+  string username = 1;
+}
+
+message UserResponse {
+  uint64 id = 1;
+  string username = 2;
+  string password = 3;
+}
